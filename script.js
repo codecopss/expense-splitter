@@ -70,21 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("themeToggle");
     const body = document.body;
 
-    // Check user preference from localStorage
-    if (localStorage.getItem("theme") === "light") {
-        body.classList.add("light-mode");
-        themeToggle.innerText = "🌞 Light Mode";
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        body.classList.toggle("light-mode", savedTheme === "light");
     }
 
     themeToggle.addEventListener("click", () => {
         body.classList.toggle("light-mode");
-
-        if (body.classList.contains("light-mode")) {
-            localStorage.setItem("theme", "light");
-            themeToggle.innerText = "🌞 Light Mode";
-        } else {
-            localStorage.setItem("theme", "dark");
-            themeToggle.innerText = "🌙 Dark Mode";
-        }
+        localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
     });
 });
