@@ -6,6 +6,7 @@
     <title>Organizing Money</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -14,7 +15,6 @@
     <div class="container">
         <h1>Organizing Money</h1>
 
-        <!-- Wrapper for the chart and total amount -->
         <div class="wrapper">
             <div class="circle-container">
                 <canvas id="moneyChart"></canvas>
@@ -39,12 +39,8 @@
             <button onclick="removeLastEntry()" class="remove-btn">Remove Last Entry</button>
         </div>
 
-        </div>
-
         <ul id="money-list"></ul>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
 </html>
