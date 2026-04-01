@@ -78,4 +78,3 @@ This project is **open-source** under the **MIT License** – feel free to modif
 
 ---
 
-Let me know if you need any refinements! 😊
